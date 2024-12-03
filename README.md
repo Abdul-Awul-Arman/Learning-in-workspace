@@ -25,6 +25,8 @@ TIP: You can also ignore values when destructuring arrays. For example, const [x
 #destructuring object
 after destructuring a value of object value of this is no longer belong to the object that pulled from.
 
+#problem with for in loop - for in loop iterate every thing in the object (like nested function) but for of loop don't
+
 #for of loop
  You don’t have to worry about adding new properties to objects. The for...of loop will only loop over the values in the object.
 
@@ -34,3 +36,12 @@ You can think of the rest parameter like the opposite of the spread operator; if
 #Variadic function
 Variadic functions are functions that take an indefinite number of arguments.
 
+|#arrow function expression 
+Regular functions can be either function declarations or function expressions, however arrow functions are always expressions. In fact, their full name is "arrow function expressions", so they can only be used where an expression is valid.
+
+#array with object destructure
+
+function createSundae([scoops = 1, toppings = ['Hot Fudge']] = []) { … }
+With this function setup, if you want to use the default number of scoops but change the toppings, you'd have to call your function a little...oddly:
+createSundae([undefined, ['Hot Fudge', 'Sprinkles', 'Caramel']]);
+Since arrays are positionally based, we have to pass undefined to "skip" over the first argument (and accept the default) to get to the second argument.
