@@ -45,3 +45,11 @@ function createSundae([scoops = 1, toppings = ['Hot Fudge']] = []) { … }
 With this function setup, if you want to use the default number of scoops but change the toppings, you'd have to call your function a little...oddly:
 createSundae([undefined, ['Hot Fudge', 'Sprinkles', 'Caramel']]);
 Since arrays are positionally based, we have to pass undefined to "skip" over the first argument (and accept the default) to get to the second argument.
+
+
+
+#es6 builtins 
+
+#symbol --A symbol is a unique and immutable data type that is often used to identify object properties.
+
+
