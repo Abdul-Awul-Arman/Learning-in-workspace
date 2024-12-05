@@ -188,3 +188,6 @@ example(1, 2, 3);
 
 ### A live collection in JavaScript refers to a DOM collection that automatically updates itself to reflect changes made to the document. If the DOM changes (elements are added, removed, or modified), the live collection immediately reflects those changes without needing to re-query the DOM
 
+
+# never trust your user input
+
