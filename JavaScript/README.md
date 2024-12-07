@@ -191,3 +191,17 @@ example(1, 2, 3);
 
 # never trust your user input
 
+
+## HTTP is a protocol which allows us to send information around the web.
+
+HTTP requests come in different flavors, using different verbs (GET, POST, PUT, and DELETE are the four most common).  The kind of request your browser makes (and the kind we will use in this chapter) is a GET request.  A GET request generally means we would like the server to send us some data.
+
+-get for ask for data 
+-post for save data
+-put for modify data
+-Delete for delete data
+
+
+# AJAX stands for Asynchronous JavaScript And XML.  Now there's a mouthful.
+
+Basically, it is a system that allows us to send requests and handle the responses from within our JavaScript code.  For example, when you leave a comment on a blog post, when you send or receive e-mail on a webmail service like Gmail, or when a webpage updates itself without refreshing, it is often using AJAX to do so.
