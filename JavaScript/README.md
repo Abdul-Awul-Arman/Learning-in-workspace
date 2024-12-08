@@ -205,3 +205,7 @@ HTTP requests come in different flavors, using different verbs (GET, POST, PUT, 
 # AJAX stands for Asynchronous JavaScript And XML.  Now there's a mouthful.
 
 Basically, it is a system that allows us to send requests and handle the responses from within our JavaScript code.  For example, when you leave a comment on a blog post, when you send or receive e-mail on a webmail service like Gmail, or when a webpage updates itself without refreshing, it is often using AJAX to do so.
+
+# Async/await
+
+No two words have made JavaScript developers smile as much as  async  and  await . These two little words allow us to suspend execution of our code while we wait for asynchronous code to finish.
