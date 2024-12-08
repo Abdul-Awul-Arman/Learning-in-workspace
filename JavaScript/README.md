@@ -209,3 +209,55 @@ Basically, it is a system that allows us to send requests and handle the respons
 # Async/await
 
 No two words have made JavaScript developers smile as much as  async  and  await . These two little words allow us to suspend execution of our code while we wait for asynchronous code to finish.
+
+
+# XMLHttpRequest Status Code Guide
+
+When using `XMLHttpRequest` in JavaScript, the `status` property provides the HTTP status code of the response from the server. Below is a quick reference of common status codes and their meanings.
+
+## Common Status Codes
+
+### 2xx (Success)
+- **200**: OK – The request was successful.
+- **201**: Created – The request was successful, and a resource was created.
+- **204**: No Content – The request was successful, but there is no content in the response.
+
+### 3xx (Redirection)
+- **301**: Moved Permanently – The requested resource has a new permanent URI.
+- **302**: Found – The requested resource is temporarily located at a different URI.
+- **304**: Not Modified – The resource has not been modified since the last request.
+
+### 4xx (Client Error)
+- **400**: Bad Request – The server could not understand the request.
+- **401**: Unauthorized – Authentication is required.
+- **403**: Forbidden – The server refuses to fulfill the request.
+- **404**: Not Found – The resource could not be found.
+- **429**: Too Many Requests – Too many requests were sent in a short period.
+
+### 5xx (Server Error)
+- **500**: Internal Server Error – The server encountered an unexpected condition.
+- **502**: Bad Gateway – The server received an invalid response from an upstream server.
+- **503**: Service Unavailable – The server is currently unable to handle the request.
+- **504**: Gateway Timeout – The server did not receive a timely response from an upstream server.
+
+## Example Usage
+
+Below is an example of how to use `XMLHttpRequest` and check the status code:
+
+```javascript
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "https://example.com/api/resource", true);
+
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    console.log("Request was successful:", xhr.responseText);
+  } else {
+    console.log("Error, status code:", xhr.status);
+  }
+};
+
+xhr.onerror = function () {
+  console.error("Request failed.");
+};
+
+xhr.send();
