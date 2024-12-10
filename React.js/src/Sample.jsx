@@ -1,11 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+
 const SmplePage = () => {
     return (
         <div >
             <h1>My awesome website in React</h1>
-            <h3>Reasons I love React</h3>
+            <h3>Reasons  love React</h3>
             <ol>
                 <li>It &apos;s composable</li>
                 <li>It &apos; declarative</li>
