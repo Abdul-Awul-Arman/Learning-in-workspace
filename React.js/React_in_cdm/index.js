@@ -14,7 +14,7 @@
 
 // ReactDOM.render(<div><MainContent/></div>,root);
 
-// let root = document.querySelector('div#root');
+let root = document.querySelector('div#root');
 let h1 = document.createElement('h1');
 h1.textContent = 'This is header';
 
