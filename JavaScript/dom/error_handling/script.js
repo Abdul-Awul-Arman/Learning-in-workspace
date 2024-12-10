@@ -53,7 +53,7 @@ async function createPost() {
     const postPromise = makeRequest('POST', api + '/create-post-with-uid', {
         uid: uidResponse.uid,
         title: titleResponse.title,
-        content: loremResponse.lorem
+        content: loremResponse.lorem    
     });
 
     const postResponse = await postPromise;

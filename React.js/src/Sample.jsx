@@ -12,7 +12,7 @@ const SmplePage = () => {
                 <li>It &apos; a hireable skill</li>
                 <li>It &apos; actively maintained by skilled people</li>
             </ol>
-        </div >ffff
+        </div >
 
     )
 };
