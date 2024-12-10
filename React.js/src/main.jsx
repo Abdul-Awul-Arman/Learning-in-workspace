@@ -7,8 +7,9 @@ import App from './App.jsx'
 
 const root=document.getElementById('root');
 
-createRoot(root).render(
+// eslint-disable-next-line   
+const rootFromReact=createRoot(root);
+
 <StrictMode>
-  <App/>
+rootFromReact.render(<App/>)
 </StrictMode>
-);

@@ -204,6 +204,8 @@ Copy code
 
 # JSX= JavaScript xml
 
+# react 17 reactDOM.render not using in react 18 in 18 we use createRoot
+
 
 
 
