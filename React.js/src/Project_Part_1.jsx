@@ -2,7 +2,7 @@ import React from "react";
 import reactLogo from './assets/react.svg'
 const FunFact = () => {
     return (
-        <div>
+        <main>
             <img src={reactLogo} alt="react logo" />
             <h1>Fun facts about React</h1>
             <ul>
@@ -12,7 +12,7 @@ const FunFact = () => {
                 <li>Is maintained by Facebook</li>
                 <li>Powers thousands of enterprise apps, including mobile apps</li>
             </ul>
-        </div>
+        </main>
     );
 };
 

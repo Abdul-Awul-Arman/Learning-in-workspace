@@ -1,11 +1,21 @@
 import React from 'react';
-import FunFact from './Project_Part_1';
+// import FunFact from './Project_Part_1';
+import Main from './MainCom'
+import Header from "./Header";
+import Footer from "./Footer"
 
-  const App= ()=>{return (
+
+// const reactElement = React.createElement("h1", null, "bismillah");
+
+const App = () => {
+  return (
     <>
-    <FunFact/>
+    <Header/>
+    <Main/>
+    <Footer/>
     </>
-  )}
+  );
+}
 
 
-export default App
+export default App;
