@@ -9,11 +9,11 @@ import Footer from "./Footer"
 
 const App = () => {
   return (
-    <>
+    <div className='card'>
     <Header/>
     <Main/>
     <Footer/>
-    </>
+    </div>
   );
 }
 

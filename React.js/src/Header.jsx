@@ -4,7 +4,7 @@ import ReactLogo from "./assets/react.svg"
 const Header = () => {
     return (
         <header>
-            <img src={ReactLogo} width="50px" alt="ReactLogo" />
+            <img src={ReactLogo} className="react-logo" alt="ReactLogo" />
             <nav >
                 <ul className="nav-list">
                 <li>Pricing</li>
