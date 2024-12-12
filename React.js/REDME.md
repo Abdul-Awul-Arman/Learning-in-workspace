@@ -52,6 +52,11 @@ Can create easily reusable and interchangeable "pieces of the web" that can be c
 # First Project React facts
 
 ![React.js facts](./src/assets/image.png)
+![React.js facts(new)](./React.js_facts/src/assets/image.png)
+
+# Props are like function parameter  
+
+
 
 
 
