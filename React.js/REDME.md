@@ -56,6 +56,9 @@ Can create easily reusable and interchangeable "pieces of the web" that can be c
 
 # Props are like function parameter  
 
+### What do props help us accomplish?
+Make a component more reusable.
+
 
 
 
