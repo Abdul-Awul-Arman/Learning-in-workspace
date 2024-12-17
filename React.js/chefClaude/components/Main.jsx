@@ -1,10 +1,36 @@
 import React from "react"
+import {useState} from "react"
 
 
 export default function Main(){
+
+
+    const [ingredient,setIngredient]=useState([]);
+
+    const ingredientElement=ingredient.map((element)=>{
+        return(
+            <li key={"element"+Math.random()}>{element}</li>
+        );
+    });
+
+    function handleSubmit($event){
+
+        $event.preventDefault();
+
+        const formData=new FormData($event.currentTarget);
+
+        const newIngredient=formData.get("ingredient");
+
+        setIngredient((prev)=>{
+            return [...prev,newIngredient];
+        });
+
+    }
+
+
     return(
-        <main className=" flex justify-center  bg-[#FAFAF8] mt-[60px] ">
-            <form className=" flex gap-[10px] " action="">
+        <main className=" flex justify-center  flex-col items-center bg-[#FAFAF8] mt-[60px] ">
+            <form onSubmit={handleSubmit} className=" flex gap-[10px] " action="">
                 <input type="text"
                  placeholder="e.g. oregano"
                  aria-label="Add ingredient"
@@ -13,6 +39,9 @@ export default function Main(){
                   />
             <button className="bg-[#141413] w-[183px] h-[38px] rounded-md text-center font-inter text-[#FAFAF8]">+ Add ingredient</button>
             </form>
+            <ul className="mt-[30px] ml-[10px] self-center w-[600px] self-start">
+                {ingredientElement}
+            </ul>
         </main>
     )
 }
