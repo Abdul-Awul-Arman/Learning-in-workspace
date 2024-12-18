@@ -25,6 +25,8 @@ export default function Main(){
             return [...prev,newIngredient];
         });
 
+        $event.currentTarget.reset()
+
     }
 
 
@@ -39,7 +41,7 @@ export default function Main(){
                   />
             <button className="bg-[#141413] w-[183px] h-[38px] rounded-md text-center font-inter text-[#FAFAF8]">+ Add ingredient</button>
             </form>
-            <ul className="mt-[30px] ml-[10px] self-center w-[600px] self-start">
+            <ul className="mt-[30px] ml-[10px] self-center w-[600px] ">
                 {ingredientElement}
             </ul>
         </main>
