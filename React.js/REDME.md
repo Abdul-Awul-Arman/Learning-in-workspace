@@ -77,6 +77,98 @@ Make a component more reusable.
 
 ### Directly modifying state variables  is not allowed in React. State updates should always use the setter function (setIsGoingOut).
 
+# Visual Summary: `event.target` vs `event.currentTarget`
+
+| Property            | Refers To                                      | Example Use Case                                                                 |
+|---------------------|-----------------------------------------------|---------------------------------------------------------------------------------|
+| `event.target`      | Element where the event **originated**        | Check which child element inside a parent was clicked.                          |
+| `event.currentTarget` | Element where the listener is **attached**   | Ensure your logic runs on the parent (or the form, in form submission handlers). |
+
+# Conditional rendering
+- 1. What is "conditional rendering"?  
+When we want to only sometimes display something on the page based on some kind of condition.
+
+- 2. When would you use `&&`?  
+When you want to either display something or NOT display something.
+
+- 3. When would you use a ternary?  
+When you need to decide which of 2 things to display.
+
+- 4. What if you need to decide between > 2 options on what to display?  
+`if...else if...else` conditional or maybe a `switch` statement.
+
+# Pure Function
+
+A **pure function** is a fundamental concept in functional programming. It refers to a function that adheres to the following principles:
+
+## Characteristics of a Pure Function
+
+1. **Deterministic**:
+   - For the same input, a pure function always returns the same output.
+   - Example:
+     ```javascript
+     function add(a, b) {
+         return a + b;
+     }
+     ```
+     - `add(2, 3)` will always return `5`.
+
+2. **No Side Effects**:
+   - A pure function does not modify any external state (variables, objects, files, etc.).
+   - It depends only on its input arguments and does not alter the state of the program or rely on mutable data.
+   - Example (pure function):
+     ```javascript
+     function multiply(a, b) {
+         return a * b;
+     }
+     ```
+     - This function does not modify external variables or state.
+   - Example (impure function):
+     ```javascript
+     let total = 0;
+     function addToTotal(amount) {
+         total += amount; // Modifies external state (side effect)
+         return total;
+     }
+     ```
+
+## Advantages of Pure Functions
+
+1. **Predictable Behavior**:
+   - Pure functions make it easier to reason about the code since their output is predictable.
+
+2. **Easier Testing**:
+   - Testing is straightforward because pure functions don’t depend on or alter external states.
+
+3. **Immutability**:
+   - Promotes immutability, which helps avoid bugs caused by shared mutable state.
+
+4. **Parallelization**:
+   - Pure functions are thread-safe and can be parallelized because they don’t modify shared state.
+
+## Examples
+
+### Pure Function Example
+```javascript
+function square(x) {
+    return x * x;
+}
+console.log(square(4)); // Always 16
+```
+
+### Impure Function Example
+```javascript
+let factor = 2;
+function multiplyByFactor(num) {
+    return num * factor; // Depends on external variable
+}
+console.log(multiplyByFactor(5)); // Result depends on `factor`
+```
+
+## Key Takeaway
+
+- **Pure Function**: No side effects, same output for the same input.
+- **Impure Function**: Might have side effects or depend on external variables.
 
 
 
